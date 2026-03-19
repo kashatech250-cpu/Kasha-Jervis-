@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KashaJervi - AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Background Effects -->
+        <div class="bg-grid"></div>
+        <div class="bg-glow"></div>
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">◉</span>
+                <span class="logo-text">KASHA<span class="logo-accent">JERVI</span></span>
+            </div>
+            <div class="clock-container">
+                <div class="digital-clock" id="clock">00:00:00</div>
+                <div class="date" id="date">Loading...</div>
+            </div>
+            <div class="system-status">
+                <span class="status-dot" id="status-dot"></span>
+                <span class="status-text" id="status-text">SYSTEM ONLINE</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- AI Core Visualization -->
+            <div class="ai-core-container">
+                <div class="ai-core" id="ai-core">
+                    <div class="core-ring ring-1"></div>
+                    <div class="core-ring ring-2"></div>
+                    <div class="core-ring ring-3"></div>
+                    <div class="core-center">
+                        <div class="core-pulse"></div>
+                    </div>
+                </div>
+                <div class="ai-status" id="ai-status">Ready</div>
+            </div>
+
+            <!-- Voice Waves Animation -->
+            <div class="voice-waves" id="voice-waves">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+
+            <!-- Microphone Button -->
+            <div class="mic-container">
+                <button class="mic-button" id="mic-button" title="Click to speak">
+                    <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                </button>
+                <p class="mic-hint" id="mic-hint">Click the microphone or say "Hey Kasha"</p>
+            </div>
+
+            <!-- API Key Input (Hidden after setup) -->
+            <div class="api-setup" id="api-setup">
+                <div class="api-card">
+                    <h3>🔑 OpenAI API Setup</h3>
+                    <p>Enter your OpenAI API key to activate KashaJervi</p>
+                    <input type="password" id="api-key-input" placeholder="sk-...">
+                    <button id="save-api-key">Activate</button>
+                    <small>Your API key is stored locally in your browser only.</small>
+                </div>
+            </div>
+        </main>
+
+        <!-- Conversation Panel -->
+        <aside class="conversation-panel" id="conversation-panel">
+            <div class="panel-header">
+                <h3>Conversation Log</h3>
+                <button class="clear-btn" id="clear-btn" title="Clear history">Clear</button>
+            </div>
+            <div class="conversation-history" id="conversation-history">
+                <div class="system-message">
+                    <span class="timestamp">[SYSTEM]</span>
+                    <span class="message-text">KashaJervi initialized. Waiting for activation...</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Command Help -->
+        <div class="command-help" id="command-help">
+            <h4>Available Commands</h4>
+            <div class="commands-grid">
+                <span class="command-tag">"Hello"</span>
+                <span class="command-tag">"Who are you"</span>
+                <span class="command-tag">"Who created you"</span>
+                <span class="command-tag">"What time is it"</span>
+                <span class="command-tag">"Open YouTube"</span>
+                <span class="command-tag">"Open Google"</span>
+                <span class="command-tag">"Search for..."</span>
+                <span class="command-tag">"Tell me a joke"</span>
+                <span class="command-tag">"Motivate me"</span>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p>Processing...</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Created by <strong>Tuyisenge Jean Dieu Aime</strong> | KashaJervi AI Assistant</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
